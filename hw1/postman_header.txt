@@ -1,0 +1,80 @@
+Postman Request Header
+Request URL:data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyMyAyMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjMgMjMiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGNpcmNsZSBmaWxsPSIjNTNBMkYyIiBjeD0iMTEuNSIgY3k9IjExLjUiIHI9IjEwLjUiLz4NCjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNNi4xLDExLjlsMi42LDIuNmMwLjgsMC44LDIsMC44LDIuOCwwTDE3LDkiLz4NCjwvc3ZnPg0K
+The requested URL
+
+Request Method:GET
+Requests data from a specified resource
+
+Status Code:200 OK
+This class of status code indicates that the client's request was successfully
+received, understood, and accepted.
+
+User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36
+The User-Agent string is often used for content negotiation, where the origin
+server selects suitable content or operating parameters for the response.
+Mozilla/5.0: Previously used to indicate compatibility with the Mozilla rendering engine.
+(Windows NT 10.0; WOW64) Details of the system in which the browser is running.
+AppleWebKit/531.21.10: The platform the browser uses.
+(KHTML, like Gecko): Browser platform details.
+Chrome/48.0.2564.103 Safari/537.36 This is used by the browser to indicate specific enhancements that are available directly in the browser or through third parties.
+
+Postman Response Header
+
+alt-svc → quic=":443"; ma=604800; v="30,29,28,27,26,25"
+Alternative Servics for HTTP, which allow an origin's resource to be
+authoritatively available at a separate network location
+
+alternate-protocol → 443:quic,p=1
+The Alternate-Protocol HTTP response header indicates that a server supports SPDY.
+Then on the second request the client will use SPDY instead of HTTP.
+
+cache-control → private, max-age=0, must-revalidate, no-transform
+Implies that the content is considered stale (and must be re-fetched) immediately
+
+content-encoding → gzip
+Compliant browsers will announce what methods are supported to the server before
+downloading the correct format; browsers that do not support compliant
+compression method will download uncompressed data. The most common compression
+schemes include gzip
+
+content-length → 6771
+The Content-Length entity-header field indicates the size of the entity-body,
+in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD
+method, the size of the entity-body that would have been sent had the request
+been a GET.
+
+content-type → application/json; charset=UTF-8
+Information about type of returned data, ex::JSON
+
+date → Sat, 13 Feb 2016 01:30:40 GMT
+The time and date of the response in GMT time
+
+etag → "3z2GbiG39NRdo416x8jooTTBAqY/PBeSU5TRLIb0xuzf6D9CVX4FOFw"
+An ETag is basically just a checksum for a file that semantically changes
+when the content of the file changes
+
+expires → Sat, 13 Feb 2016 01:30:40 GMT
+The standard way to specify when an asset expired
+
+server → GSE
+The Server response-header field contains information about the software used by
+the origin server to handle the request. The field can contain multiple product
+tokens (section 3.8) and comments identifying the server and any significant
+subproducts. The product tokens are listed in order of their significance for
+identifying the application.
+
+status → 200
+This class of status code indicates that the client's request was successfully
+received, understood, and accepted.
+
+vary → Origin, X-Origin
+Vary response header allows a cache to determine if a cached (still fresh) response may be returned for a subsequent request, based on whether or not the new request's headers match those that were sent when the the previously response was originally cached.
+
+x-content-type-options → nosniff
+The only defined value, "nosniff", prevents Internet Explorer and Google Chrome from MIME-sniffing a response away from the declared content-type.
+
+x-frame-options → SAMEORIGIN
+no rendering if origin mismatch.
+
+x-xss-protection → 1; mode=block
+This header enables the Cross-site scripting (XSS) filter built into most recent web browsers. It's usually enabled by default anyway, so the role of this header is to re-enable the filter for this particular website if it was disabled by the user

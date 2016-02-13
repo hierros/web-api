@@ -1,0 +1,33 @@
+SOAP Response Header
+
+Cache-Control	private, max-age=0
+Implies that the content is considered stale (and must be re-fetched) immediately
+
+Server	Microsoft-IIS/7.0
+The Server response-header field contains information about the software used by
+the origin server to handle the request. The field can contain multiple product
+tokens (section 3.8) and comments identifying the server and any significant
+subproducts. The product tokens are listed in order of their significance for
+identifying the application.
+
+X-AspNet-Version	4.0.30319
+ASP Net Server version
+
+#status#	HTTP/1.1 200 OK
+This class of status code indicates that the client's request was successfully
+received, understood, and accepted.
+
+Content-Length	456
+The Content-Length entity-header field indicates the size of the entity-body,
+in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD
+method, the size of the entity-body that would have been sent had the request
+been a GET
+
+Date	Sat, 13 Feb 2016 02:47:32 GMT
+The time and date of the response in GMT time
+
+Content-Type	application/soap+xml; charset=utf-8
+Information about type of returned data, ex::soap+xml
+
+X-Powered-By	ASP.NET
+The collection (there can be multiple) of application frameworks being run by the site
