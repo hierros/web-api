@@ -1,0 +1,9 @@
+Question:
+Give one reason (there are many) OAuth tokens should not be granted in the
+main flow, assuming the user has sent in the correct credentials.
+
+
+Answer:
+Keeping OAuth token authorization outside of the main flow and
+having the additional proxy makes OAuth more secure because then that proxy
+can be the only thing able to decrypt the access and refresh tokens to the Resource Server.
