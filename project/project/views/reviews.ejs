@@ -1,0 +1,15 @@
+<h2>Reviews</h2>
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Actors/Actresses</th>
+    <th>Year</th>
+  </tr>
+  <tr ng-repeat="movie in movies">
+    <td><a href="/movies/{{movie._id}}">{{movie.title}}</a></td>
+    <td>{{movie.actor[0]}},
+      {{movie.actor[1]}}, and
+      {{movie.actor[2]}}</td>
+    <td>{{movie.year}}</td>
+  </tr>
+</table>

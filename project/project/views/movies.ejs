@@ -1,0 +1,27 @@
+<h2>Movies</h2>
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Actors/Actresses</th>
+    <th>Year</th>
+    <th>Delete</th>
+  </tr>
+  <tr ng-repeat="movie in movies">
+    <td>{{movie.title}}</td>
+    <td>{{movie.actor[0]}},
+      {{movie.actor[1]}}, and
+      {{movie.actor[2]}}</td>
+    <td>{{movie.year}}</td>
+    <td>
+      <a href="" ng-click="deleteMovie(movie._id)">delete</a>
+    </td>
+  </tr>
+</table>
+<br />
+<h2>Add a movie</h2>
+  <input placeholder="Title" class="form-control" type="text" ng-model="movie.title" required/><br />
+  <input placeholder="Actor/Actress" type="text" ng-model="movie.actor[0]" required/><br />
+  <input placeholder="Actor/Actress" type="text" ng-model="movie.actor[1]" required/><br />
+  <input placeholder="Actor/Actress" type="text" ng-model="movie.actor[2]" required/><br />
+  <input placeholder="Year" type="text" ng-model="movie.year" required/><br />
+  <button class="btn btn-default" ng-click="addMovie()">Add Movie</button>
