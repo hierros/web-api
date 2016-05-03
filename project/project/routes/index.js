@@ -13,8 +13,18 @@ router.get('/movies', function(req, res, next) {
   res.render('movies', { title: 'IMDb Lite' });
 });
 
+router.get('/user-review', function(req, res, next) {
+  res.render('user-review', { title: 'IMDb Lite' });
+});
+
 router.get('/movieslist', function(req, res, next) {
   db.movies.find(function(err, docs) {
+    res.json(docs);
+  });
+});
+
+router.get('/movie-review', function(req, res, next) {
+  db.reviews.find(function(err, docs) {
     res.json(docs);
   });
 });
@@ -51,14 +61,7 @@ router.get('/reviews', function(req, res, next) {
 router.post('/reviews', function(req, res, next) {
   db.reviews.insert(req.body, function(err, doc){
     res.json(doc);
-  });});
-
-router.delete('/reviews/:id', function(req, res, next) {
-  var id = req.params.id;
-  db.reviews.remove({
-    _id: mongojs.ObjectId(id)
-  }, function(err, doc){
-    res.json(doc);
   });
 });
+
 module.exports = router;

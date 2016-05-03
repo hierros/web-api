@@ -1,0 +1,21 @@
+<h2>{{movie.title}}</h2> <h5>{{movie.year}}</h5>
+
+<h4>Reviews</h4>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Review</th>
+    <th>Rating</th>
+  </tr>
+  <tr ng-repeat="review in reviews | filter: {movie_id : movie._id}">
+    <td>{{review.name}}</td>
+    <td>{{review.review}}</td>
+    <td>{{review.rating}}/5 Stars</td>
+  </tr>
+</table>
+
+<h3>Add a Review</h3>
+<input placeholder="Name" type="text" ng-model="review.name" required/><br />
+<textarea placeholder="Review" ng-model="review.review" required/></textarea><br />
+<input placeholder="Rating" type="text" ng-model="review.rating" required/><br />
+<button class="btn btn-default" ng-click="addReview(movie)">Add Review</button>

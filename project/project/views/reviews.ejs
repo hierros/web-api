@@ -1,12 +1,17 @@
 <h2>Reviews</h2>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Movie Title" ng-model="search.title" aria-describedby="basic-addon3">
+</div>
+
 <table class="table table-striped">
   <tr>
     <th>Title</th>
     <th>Actors/Actresses</th>
     <th>Year</th>
   </tr>
-  <tr ng-repeat="movie in movies">
-    <td><a href="/movies/{{movie._id}}">{{movie.title}}</a></td>
+  <tr ng-repeat="movie in movies | filter: search">
+    <td><a href="" ng-click="getReviews(movie._id)">{{movie.title}}</a></td>
     <td>{{movie.actor[0]}},
       {{movie.actor[1]}}, and
       {{movie.actor[2]}}</td>
